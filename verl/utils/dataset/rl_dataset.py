@@ -119,9 +119,7 @@ class RLHFDataset(Dataset):
         self.truncation = config.get("truncation", "error")
         self.filter_overlong_prompts = config.get("filter_overlong_prompts", True)
         self.apply_chat_template_kwargs = config.get("apply_chat_template_kwargs", {})
-        self.mm_processor_kwargs = normalize_mm_processor_kwargs(
-            self.processor, config.get("mm_processor_kwargs", {})
-        )
+        self.mm_processor_kwargs = normalize_mm_processor_kwargs(self.processor, config.get("mm_processor_kwargs", {}))
 
         # Mirror AgentLoopWorker's tool loading so length filtering sees the
         # same schemas the rollout will.

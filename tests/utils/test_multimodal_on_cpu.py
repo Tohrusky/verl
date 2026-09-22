@@ -15,9 +15,9 @@
 import pytest
 from transformers import (
     LlavaProcessor,
+    Qwen2_5_VLProcessor,
     Qwen2Tokenizer,
     Qwen2VLProcessor,
-    Qwen2_5_VLProcessor,
     Qwen3VLProcessor,
 )
 
